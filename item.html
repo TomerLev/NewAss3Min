@@ -119,35 +119,73 @@
         <div class="col-md-8 single-right-left simpleCart_shelfItem">
             <h3>Water Sports Waistcoat</h3>
             <p><span class="item_price">$650</span>
-                <del>$1,199</del>
             </p>
-            <div class="rating1">
-                <ul class="stars">
-                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
-            <div class="description">
-                <h5>Check delivery, payment options and charges at your location</h5>
-                <form action="#" method="post">
-                    <input type="text" value="Enter pincode" onfocus="this.value = '';"
-                           onblur="if (this.value == '') {this.value = 'Enter pincode';}"
-                           required="">
-                    <input type="submit" value="Check">
-                </form>
-            </div>
             <div class="color-quality">
                 <div class="color-quality-right">
-                    <h5>Quality :</h5>
-                    <select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
-                        <option value="null">5 Qty</option>
-                        <option value="null">6 Qty</option>
-                        <option value="null">7 Qty</option>
-                        <option value="null">10 Qty</option>
-                    </select>
+                    <div class="container" ng-repeat="item in $ctrl.list">
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table table-bordered" style="background-color: #ffffff;">
+                        <thead>
+                        <tr>
+                            <th class="fontProduct" colspan="2">General :</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="fontProduct">Price :</td>
+                            <td class="fontProduct">{{item.price}}</td>
+                        </tr>
+                        <tr>
+                            <td class="fontProduct">Category :</td>
+                            <td class="fontProduct">{{item.category}}</td>
+                        </tr>
+                        <tr>
+                            <td class="fontProduct">Manufacturer :</td>
+                            <td class="fontProduct">{{item.manufacturer}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-hover table-bordered" style="background-color: #ffffff;">
+                        <thead>
+                        <tr>
+                            <th class="fontProduct" colspan="2">General Features :</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="fontProduct">Operating System :</td>
+                            <td class="fontProduct">{{item.operating_system}}</td>
+                        </tr>
+                        <tr>
+                            <td class="fontProduct">Form Factor :</td>
+                            <td class="fontProduct">{{item.form_factor}}</td>
+                        </tr>
+                        <tr>
+                            <td class="fontProduct">Dimensions (mm) :</td>
+                            <td class="fontProduct">{{item.dimensions}}</td>
+                        </tr>
+                        <tr>
+                            <td class="fontProduct">Weight (g) :</td>
+                            <td class="fontProduct">{{item.weight}}</td>
+                        </tr>
+                        <tr>
+                            <td class="fontProduct">Battery Capacity (mAh) :</td>
+                            <td class="fontProduct">{{item.battery_capacity}}</td>
+                        </tr>
+                        <tr>
+                            <td class="fontProduct">Removable Battery :</td>
+                            <td class="fontProduct">{{item.removable_battery}}</td>
+                        </tr>
+                        <tr>
+                            <td class="fontProduct">Colours :</td>
+                            <td class="fontProduct">{{item.colors}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
                 </div>
             </div>
             <div class="occasional">
